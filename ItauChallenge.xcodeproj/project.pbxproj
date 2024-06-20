@@ -7,10 +7,27 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AF3DFA342C238FF6009D903C /* ReceiptListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF3DFA2E2C238FF6009D903C /* ReceiptListPresenter.swift */; };
+		AF3DFA352C238FF6009D903C /* ReceiptListWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF3DFA2F2C238FF6009D903C /* ReceiptListWorker.swift */; };
+		AF3DFA362C238FF6009D903C /* ReceiptListRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF3DFA302C238FF6009D903C /* ReceiptListRouter.swift */; };
+		AF3DFA372C238FF6009D903C /* ReceiptListModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF3DFA312C238FF6009D903C /* ReceiptListModels.swift */; };
+		AF3DFA382C238FF6009D903C /* ReceiptListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF3DFA322C238FF6009D903C /* ReceiptListViewController.swift */; };
+		AF3DFA392C238FF6009D903C /* ReceiptListInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF3DFA332C238FF6009D903C /* ReceiptListInteractor.swift */; };
+		AF3DFA402C239004009D903C /* ReceiptDetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF3DFA3A2C239004009D903C /* ReceiptDetailPresenter.swift */; };
+		AF3DFA412C239004009D903C /* ReceiptDetailWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF3DFA3B2C239004009D903C /* ReceiptDetailWorker.swift */; };
+		AF3DFA422C239004009D903C /* ReceiptDetailRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF3DFA3C2C239004009D903C /* ReceiptDetailRouter.swift */; };
+		AF3DFA432C239004009D903C /* ReceiptDetailModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF3DFA3D2C239004009D903C /* ReceiptDetailModels.swift */; };
+		AF3DFA442C239004009D903C /* ReceiptDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF3DFA3E2C239004009D903C /* ReceiptDetailViewController.swift */; };
+		AF3DFA452C239004009D903C /* ReceiptDetailInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF3DFA3F2C239004009D903C /* ReceiptDetailInteractor.swift */; };
+		AF3DFA492C2394EA009D903C /* ViewCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF3DFA482C2394EA009D903C /* ViewCode.swift */; };
+		AF3DFA4B2C23951C009D903C /* ReceiptListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF3DFA4A2C23951C009D903C /* ReceiptListView.swift */; };
+		AF3DFA4E2C2396E9009D903C /* ReceiptCellTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF3DFA4D2C2396E9009D903C /* ReceiptCellTableViewCell.swift */; };
+		AF70C7F42C24B69900BA54EC /* ReceiptEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF70C7F32C24B69900BA54EC /* ReceiptEntity.swift */; };
+		AF70C7F62C24B6B400BA54EC /* Pagination.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF70C7F52C24B6B400BA54EC /* Pagination.swift */; };
+		AF70C7F92C24CF8F00BA54EC /* comprovantes.json in Resources */ = {isa = PBXBuildFile; fileRef = AF70C7F82C24CF8F00BA54EC /* comprovantes.json */; };
 		AF81F2312C238DEA00E35765 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF81F2302C238DEA00E35765 /* AppDelegate.swift */; };
 		AF81F2332C238DEA00E35765 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF81F2322C238DEA00E35765 /* SceneDelegate.swift */; };
 		AF81F2352C238DEA00E35765 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF81F2342C238DEA00E35765 /* ViewController.swift */; };
-		AF81F2382C238DEA00E35765 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF81F2362C238DEA00E35765 /* Main.storyboard */; };
 		AF81F23A2C238DEA00E35765 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AF81F2392C238DEA00E35765 /* Assets.xcassets */; };
 		AF81F23D2C238DEA00E35765 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF81F23B2C238DEA00E35765 /* LaunchScreen.storyboard */; };
 		AF81F2482C238DEB00E35765 /* ItauChallengeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF81F2472C238DEB00E35765 /* ItauChallengeTests.swift */; };
@@ -36,11 +53,28 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		AF3DFA2E2C238FF6009D903C /* ReceiptListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReceiptListPresenter.swift; sourceTree = "<group>"; };
+		AF3DFA2F2C238FF6009D903C /* ReceiptListWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReceiptListWorker.swift; sourceTree = "<group>"; };
+		AF3DFA302C238FF6009D903C /* ReceiptListRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReceiptListRouter.swift; sourceTree = "<group>"; };
+		AF3DFA312C238FF6009D903C /* ReceiptListModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReceiptListModels.swift; sourceTree = "<group>"; };
+		AF3DFA322C238FF6009D903C /* ReceiptListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReceiptListViewController.swift; sourceTree = "<group>"; };
+		AF3DFA332C238FF6009D903C /* ReceiptListInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReceiptListInteractor.swift; sourceTree = "<group>"; };
+		AF3DFA3A2C239004009D903C /* ReceiptDetailPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReceiptDetailPresenter.swift; sourceTree = "<group>"; };
+		AF3DFA3B2C239004009D903C /* ReceiptDetailWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReceiptDetailWorker.swift; sourceTree = "<group>"; };
+		AF3DFA3C2C239004009D903C /* ReceiptDetailRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReceiptDetailRouter.swift; sourceTree = "<group>"; };
+		AF3DFA3D2C239004009D903C /* ReceiptDetailModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReceiptDetailModels.swift; sourceTree = "<group>"; };
+		AF3DFA3E2C239004009D903C /* ReceiptDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReceiptDetailViewController.swift; sourceTree = "<group>"; };
+		AF3DFA3F2C239004009D903C /* ReceiptDetailInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReceiptDetailInteractor.swift; sourceTree = "<group>"; };
+		AF3DFA482C2394EA009D903C /* ViewCode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewCode.swift; sourceTree = "<group>"; };
+		AF3DFA4A2C23951C009D903C /* ReceiptListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReceiptListView.swift; sourceTree = "<group>"; };
+		AF3DFA4D2C2396E9009D903C /* ReceiptCellTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReceiptCellTableViewCell.swift; sourceTree = "<group>"; };
+		AF70C7F32C24B69900BA54EC /* ReceiptEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReceiptEntity.swift; sourceTree = "<group>"; };
+		AF70C7F52C24B6B400BA54EC /* Pagination.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pagination.swift; sourceTree = "<group>"; };
+		AF70C7F82C24CF8F00BA54EC /* comprovantes.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = comprovantes.json; sourceTree = "<group>"; };
 		AF81F22D2C238DEA00E35765 /* ItauChallenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ItauChallenge.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AF81F2302C238DEA00E35765 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AF81F2322C238DEA00E35765 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		AF81F2342C238DEA00E35765 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		AF81F2372C238DEA00E35765 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		AF81F2392C238DEA00E35765 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AF81F23C2C238DEA00E35765 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AF81F23E2C238DEA00E35765 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -76,6 +110,47 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		AF3DFA462C239364009D903C /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				AF3DFA472C2394DA009D903C /* ViewCode */,
+			);
+			path = Protocol;
+			sourceTree = "<group>";
+		};
+		AF3DFA472C2394DA009D903C /* ViewCode */ = {
+			isa = PBXGroup;
+			children = (
+				AF3DFA482C2394EA009D903C /* ViewCode.swift */,
+			);
+			path = ViewCode;
+			sourceTree = "<group>";
+		};
+		AF3DFA4C2C2396B3009D903C /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				AF3DFA4D2C2396E9009D903C /* ReceiptCellTableViewCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		AF70C7F22C24B66900BA54EC /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				AF70C7F32C24B69900BA54EC /* ReceiptEntity.swift */,
+				AF70C7F52C24B6B400BA54EC /* Pagination.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		AF70C7F72C24CF8100BA54EC /* Mock */ = {
+			isa = PBXGroup;
+			children = (
+				AF70C7F82C24CF8F00BA54EC /* comprovantes.json */,
+			);
+			path = Mock;
+			sourceTree = "<group>";
+		};
 		AF81F2242C238DEA00E35765 = {
 			isa = PBXGroup;
 			children = (
@@ -99,10 +174,13 @@
 		AF81F22F2C238DEA00E35765 /* ItauChallenge */ = {
 			isa = PBXGroup;
 			children = (
+				AF81F2622C238E7300E35765 /* Scene */,
+				AF3DFA462C239364009D903C /* Protocol */,
+				AF70C7F22C24B66900BA54EC /* Model */,
+				AF70C7F72C24CF8100BA54EC /* Mock */,
 				AF81F2302C238DEA00E35765 /* AppDelegate.swift */,
 				AF81F2322C238DEA00E35765 /* SceneDelegate.swift */,
 				AF81F2342C238DEA00E35765 /* ViewController.swift */,
-				AF81F2362C238DEA00E35765 /* Main.storyboard */,
 				AF81F2392C238DEA00E35765 /* Assets.xcassets */,
 				AF81F23B2C238DEA00E35765 /* LaunchScreen.storyboard */,
 				AF81F23E2C238DEA00E35765 /* Info.plist */,
@@ -125,6 +203,51 @@
 				AF81F2532C238DEB00E35765 /* ItauChallengeUITestsLaunchTests.swift */,
 			);
 			path = ItauChallengeUITests;
+			sourceTree = "<group>";
+		};
+		AF81F2622C238E7300E35765 /* Scene */ = {
+			isa = PBXGroup;
+			children = (
+				AF81F2652C238EBB00E35765 /* Receipt */,
+			);
+			path = Scene;
+			sourceTree = "<group>";
+		};
+		AF81F2632C238E7700E35765 /* ReceiptList */ = {
+			isa = PBXGroup;
+			children = (
+				AF3DFA4C2C2396B3009D903C /* Cell */,
+				AF3DFA2E2C238FF6009D903C /* ReceiptListPresenter.swift */,
+				AF3DFA2F2C238FF6009D903C /* ReceiptListWorker.swift */,
+				AF3DFA302C238FF6009D903C /* ReceiptListRouter.swift */,
+				AF3DFA312C238FF6009D903C /* ReceiptListModels.swift */,
+				AF3DFA322C238FF6009D903C /* ReceiptListViewController.swift */,
+				AF3DFA332C238FF6009D903C /* ReceiptListInteractor.swift */,
+				AF3DFA4A2C23951C009D903C /* ReceiptListView.swift */,
+			);
+			path = ReceiptList;
+			sourceTree = "<group>";
+		};
+		AF81F2642C238E8F00E35765 /* ReceiptDetail */ = {
+			isa = PBXGroup;
+			children = (
+				AF3DFA3A2C239004009D903C /* ReceiptDetailPresenter.swift */,
+				AF3DFA3B2C239004009D903C /* ReceiptDetailWorker.swift */,
+				AF3DFA3C2C239004009D903C /* ReceiptDetailRouter.swift */,
+				AF3DFA3D2C239004009D903C /* ReceiptDetailModels.swift */,
+				AF3DFA3E2C239004009D903C /* ReceiptDetailViewController.swift */,
+				AF3DFA3F2C239004009D903C /* ReceiptDetailInteractor.swift */,
+			);
+			path = ReceiptDetail;
+			sourceTree = "<group>";
+		};
+		AF81F2652C238EBB00E35765 /* Receipt */ = {
+			isa = PBXGroup;
+			children = (
+				AF81F2642C238E8F00E35765 /* ReceiptDetail */,
+				AF81F2632C238E7700E35765 /* ReceiptList */,
+			);
+			path = Receipt;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -233,7 +356,7 @@
 			files = (
 				AF81F23D2C238DEA00E35765 /* LaunchScreen.storyboard in Resources */,
 				AF81F23A2C238DEA00E35765 /* Assets.xcassets in Resources */,
-				AF81F2382C238DEA00E35765 /* Main.storyboard in Resources */,
+				AF70C7F92C24CF8F00BA54EC /* comprovantes.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -258,9 +381,26 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AF3DFA442C239004009D903C /* ReceiptDetailViewController.swift in Sources */,
+				AF3DFA372C238FF6009D903C /* ReceiptListModels.swift in Sources */,
+				AF70C7F42C24B69900BA54EC /* ReceiptEntity.swift in Sources */,
+				AF3DFA382C238FF6009D903C /* ReceiptListViewController.swift in Sources */,
+				AF3DFA352C238FF6009D903C /* ReceiptListWorker.swift in Sources */,
 				AF81F2352C238DEA00E35765 /* ViewController.swift in Sources */,
+				AF3DFA392C238FF6009D903C /* ReceiptListInteractor.swift in Sources */,
+				AF3DFA342C238FF6009D903C /* ReceiptListPresenter.swift in Sources */,
+				AF3DFA402C239004009D903C /* ReceiptDetailPresenter.swift in Sources */,
+				AF3DFA4B2C23951C009D903C /* ReceiptListView.swift in Sources */,
 				AF81F2312C238DEA00E35765 /* AppDelegate.swift in Sources */,
+				AF3DFA452C239004009D903C /* ReceiptDetailInteractor.swift in Sources */,
+				AF3DFA432C239004009D903C /* ReceiptDetailModels.swift in Sources */,
+				AF3DFA4E2C2396E9009D903C /* ReceiptCellTableViewCell.swift in Sources */,
+				AF3DFA422C239004009D903C /* ReceiptDetailRouter.swift in Sources */,
 				AF81F2332C238DEA00E35765 /* SceneDelegate.swift in Sources */,
+				AF3DFA362C238FF6009D903C /* ReceiptListRouter.swift in Sources */,
+				AF70C7F62C24B6B400BA54EC /* Pagination.swift in Sources */,
+				AF3DFA412C239004009D903C /* ReceiptDetailWorker.swift in Sources */,
+				AF3DFA492C2394EA009D903C /* ViewCode.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -297,14 +437,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		AF81F2362C238DEA00E35765 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				AF81F2372C238DEA00E35765 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		AF81F23B2C238DEA00E35765 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -446,7 +578,6 @@
 				INFOPLIST_FILE = ItauChallenge/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -473,7 +604,6 @@
 				INFOPLIST_FILE = ItauChallenge/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
