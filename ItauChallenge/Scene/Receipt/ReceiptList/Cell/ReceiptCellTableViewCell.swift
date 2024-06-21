@@ -5,16 +5,6 @@
 //  Created by Thiago Lima on 19/06/24.
 //
 
-//    Sua missão é desenvolver 2 telas, usando um json mockado que estamos enviando junto com esse descritivo.
-//    - Tela de listagem de comprovantes, cada item na lista deve conter:
-//        - Título (title)
-//        - Nome do favorecido (receiverName)
-//        - Valor (amount)
-//        - Data (date)
-//    Ao clicar no item da lista deverá redirecionar para a tela de detalhe de comprovante
-
-
-
 import UIKit
 
 class ReceiptCellTableViewCell: UITableViewCell {
@@ -27,7 +17,7 @@ class ReceiptCellTableViewCell: UITableViewCell {
     
     lazy var receiverName: UILabel = {
         let label = UILabel(frame: .zero)
-        label.text = self.receipt?.name
+        label.text = self.receipt?.receiverName
         return label
     }()
     
@@ -49,6 +39,7 @@ class ReceiptCellTableViewCell: UITableViewCell {
         self.receipt = receipt
         setupViewConfiguration()
     }
+    
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
         // Configure the view for the selected state
@@ -64,18 +55,18 @@ extension ReceiptCellTableViewCell: ViewCode {
     func setupConstraints() {
         let constraints = [
             
-            receiptTitle.topAnchor.constraint(equalTo: self.topAnchor, constant: 10),
-            receiptTitle.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 20),
+            receiptTitle.topAnchor.constraint(equalTo: self.topAnchor, constant: Padding.paddingSmall),
+            receiptTitle.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: Padding.paddingMedium),
             
-            amount.topAnchor.constraint(equalTo: self.topAnchor, constant: 10),
-            amount.leadingAnchor.constraint(equalTo: receiptTitle.trailingAnchor, constant: 10),
-            amount.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -20),
+            amount.topAnchor.constraint(equalTo: self.topAnchor, constant: Padding.paddingSmall),
+            amount.leadingAnchor.constraint(equalTo: receiptTitle.trailingAnchor, constant: Padding.paddingSmall),
+            amount.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -Padding.paddingMedium),
             
-            receiverName.topAnchor.constraint(equalTo: receiptTitle.bottomAnchor, constant: 10),
-            receiverName.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 20),
+            receiverName.topAnchor.constraint(equalTo: receiptTitle.bottomAnchor, constant: Padding.paddingSmall),
+            receiverName.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: Padding.paddingMedium),
             
-            date.topAnchor.constraint(equalTo: receiverName.bottomAnchor, constant: 30),
-            date.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 20),
+            date.topAnchor.constraint(equalTo: receiverName.bottomAnchor, constant: Padding.paddingLarge),
+            date.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: Padding.paddingMedium),
             
         ]
         NSLayoutConstraint.activate(constraints)
@@ -83,8 +74,9 @@ extension ReceiptCellTableViewCell: ViewCode {
     
     func configureViews() {
         self.backgroundColor = .white
-        receiptTitle.font = .boldSystemFont(ofSize: 22)
-        amount.font = .boldSystemFont(ofSize: 22)
+        self.selectionStyle = .none
+        receiptTitle.font = .preferredFont(forTextStyle: .headline)
+        amount.font = .preferredFont(forTextStyle: .headline)
         
     }
     

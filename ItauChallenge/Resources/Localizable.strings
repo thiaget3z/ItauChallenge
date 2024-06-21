@@ -1,0 +1,19 @@
+/* 
+  Localizable.strings
+  ItauChallenge
+
+  Created by Thiago Lima on 21/06/24.
+  
+*/
+
+//ReceiptList
+"receiptListTitle" = "Comprovantes";
+
+//ReceiptDetail
+"receiptDetailReceiptId" = "ID Comprovante: #%@";
+"receiptDetailData" = "Data: %@";
+"receiptDetailReceiverName" = "Nome do favorecido: %@";
+"receiptDetailName" = "Nome: %@";
+
+
+

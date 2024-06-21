@@ -7,18 +7,16 @@
 
 import UIKit
 
-protocol ReceiptListDisplayLogic: AnyObject
-{
+protocol ReceiptListDisplayLogic: AnyObject {
     func displayReceipt(viewModel: ReceiptList.FetchReceipts.ViewModel)
 }
 
-class ReceiptListViewController: UIViewController, ReceiptListDisplayLogic
-{
+class ReceiptListViewController: UIViewController, ReceiptListDisplayLogic {
     
     let receiptView = ReceiptListView()
     
     var interactor: ReceiptListBusinessLogic?
-    var router: (NSObjectProtocol & ReceiptListRoutingLogic & ReceiptListDataPassing)?
+    var router: (ReceiptListRoutingLogic & ReceiptListDataPassing)?
     
     // MARK: Object lifecycle
     
@@ -41,36 +39,20 @@ class ReceiptListViewController: UIViewController, ReceiptListDisplayLogic
     
     private func setup()
     {
-        let interactor = ReceiptListInteractor()
-        let presenter = ReceiptListPresenter()
-        let router = ReceiptListRouter()
+        let presenter = ReceiptListPresenter(viewController: self)
+        let interactor = ReceiptListInteractor(presenter: presenter, worker: ReceiptListWorker())
+        let router = ReceiptListRouter(viewController: self, dataStore: interactor)
         self.interactor = interactor
         self.router = router
-        interactor.worker = ReceiptListWorker()
-        interactor.presenter = presenter
-        presenter.viewController = self
-        router.viewController = self
-        router.dataStore = interactor
+        receiptView.delegate = self
+        title = LocalizableStrings.receiptListTitle.localized()
     }
-    
-    // MARK: Routing
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?)
-    {
-        if let scene = segue.identifier {
-            let selector = NSSelectorFromString("routeTo\(scene)WithSegue:")
-            if let router = router, router.responds(to: selector) {
-                router.perform(selector, with: segue)
-            }
-        }
-    }
-    
+
     // MARK: View lifecycle
     
     override func viewDidLoad()
     {
         super.viewDidLoad()
-        
         let request = ReceiptList.FetchReceipts.Request()
         interactor?.requestReceipt(request: request)
     }
@@ -78,4 +60,14 @@ class ReceiptListViewController: UIViewController, ReceiptListDisplayLogic
     func displayReceipt(viewModel: ReceiptList.FetchReceipts.ViewModel) {
         receiptView.receipts = viewModel.displayReceipts
     }
+}
+
+extension ReceiptListViewController: ReceiptListViewDelegate {
+    
+    // MARK: Routing
+    
+    func didSelectReceipt(receipt: ReceiptEntity) {
+        router?.routeToDetail(receiptEntity: receipt)
+    }
+    
 }

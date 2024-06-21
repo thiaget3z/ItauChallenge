@@ -7,23 +7,22 @@
 
 import UIKit
 
-protocol ReceiptListBusinessLogic
-{
+protocol ReceiptListBusinessLogic {
     func requestReceipt(request: ReceiptList.FetchReceipts.Request)
 }
 
-protocol ReceiptListDataStore
-{
-    //var name: String { get set }
-}
+protocol ReceiptListDataStore { }
 
-class ReceiptListInteractor: ReceiptListBusinessLogic, ReceiptListDataStore
-{
+class ReceiptListInteractor: ReceiptListBusinessLogic, ReceiptListDataStore {
     var presenter: ReceiptListPresentationLogic?
     var worker: ReceiptListWorkerProtocol?
     
-    func requestReceipt(request: ReceiptList.FetchReceipts.Request)
-    {
+    init(presenter: ReceiptListPresentationLogic, worker: ReceiptListWorkerProtocol) {
+        self.presenter = presenter
+        self.worker = worker
+    }
+    
+    func requestReceipt(request: ReceiptList.FetchReceipts.Request) {
         worker?.fetchReceipt(page: 1, pageSize: 10, completion: { [self] result in
             switch result {
                 

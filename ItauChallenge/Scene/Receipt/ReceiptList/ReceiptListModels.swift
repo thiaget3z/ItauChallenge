@@ -7,11 +7,10 @@
 
 import Foundation
 
-enum ReceiptList
-{
+enum ReceiptList {
     // MARK: Use cases
-    enum FetchReceipts
-    {
+    enum FetchReceipts {
+        case title(title: ReceiptDetail.RequestReceiptDetail)
         struct Request { }
         
         struct Response {

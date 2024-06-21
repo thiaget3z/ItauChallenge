@@ -14,8 +14,6 @@
 		AF3DFA382C238FF6009D903C /* ReceiptListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF3DFA322C238FF6009D903C /* ReceiptListViewController.swift */; };
 		AF3DFA392C238FF6009D903C /* ReceiptListInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF3DFA332C238FF6009D903C /* ReceiptListInteractor.swift */; };
 		AF3DFA402C239004009D903C /* ReceiptDetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF3DFA3A2C239004009D903C /* ReceiptDetailPresenter.swift */; };
-		AF3DFA412C239004009D903C /* ReceiptDetailWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF3DFA3B2C239004009D903C /* ReceiptDetailWorker.swift */; };
-		AF3DFA422C239004009D903C /* ReceiptDetailRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF3DFA3C2C239004009D903C /* ReceiptDetailRouter.swift */; };
 		AF3DFA432C239004009D903C /* ReceiptDetailModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF3DFA3D2C239004009D903C /* ReceiptDetailModels.swift */; };
 		AF3DFA442C239004009D903C /* ReceiptDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF3DFA3E2C239004009D903C /* ReceiptDetailViewController.swift */; };
 		AF3DFA452C239004009D903C /* ReceiptDetailInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF3DFA3F2C239004009D903C /* ReceiptDetailInteractor.swift */; };
@@ -25,12 +23,32 @@
 		AF70C7F42C24B69900BA54EC /* ReceiptEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF70C7F32C24B69900BA54EC /* ReceiptEntity.swift */; };
 		AF70C7F62C24B6B400BA54EC /* Pagination.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF70C7F52C24B6B400BA54EC /* Pagination.swift */; };
 		AF70C7F92C24CF8F00BA54EC /* comprovantes.json in Resources */ = {isa = PBXBuildFile; fileRef = AF70C7F82C24CF8F00BA54EC /* comprovantes.json */; };
+		AF70C7FB2C24E1A100BA54EC /* ReceiptDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF70C7FA2C24E1A100BA54EC /* ReceiptDetailView.swift */; };
+		AF70C8022C25271A00BA54EC /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = AF70C8012C25271A00BA54EC /* Localizable.strings */; };
+		AF70C8062C25AD0D00BA54EC /* LocalizableStrings.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF70C8052C25AD0D00BA54EC /* LocalizableStrings.swift */; };
+		AF70C80C2C25B17000BA54EC /* Padding.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF70C80B2C25B17000BA54EC /* Padding.swift */; };
+		AF70C8112C25C1F400BA54EC /* ReceiptListWorkerSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF70C8102C25C1F400BA54EC /* ReceiptListWorkerSpy.swift */; };
+		AF70C8132C25C31000BA54EC /* ReceiptListPresenterSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF70C8122C25C31000BA54EC /* ReceiptListPresenterSpy.swift */; };
+		AF70C8152C25C49400BA54EC /* ReceiptListRouterSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF70C8142C25C49400BA54EC /* ReceiptListRouterSpy.swift */; };
+		AF70C8172C25C70100BA54EC /* ReceiptListInteractorSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF70C8162C25C70100BA54EC /* ReceiptListInteractorSpy.swift */; };
+		AF70C81B2C25C99E00BA54EC /* ReceiptListViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF70C81A2C25C99E00BA54EC /* ReceiptListViewControllerTests.swift */; };
+		AF70C81D2C25D3E500BA54EC /* ReceiptListPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF70C81C2C25D3E500BA54EC /* ReceiptListPresenterTests.swift */; };
+		AF70C8332C25DB8400BA54EC /* ReceiptListViewControllerSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF70C8322C25DB8400BA54EC /* ReceiptListViewControllerSpy.swift */; };
+		AF70C8382C25E59200BA54EC /* ReceiptListInteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF70C8372C25E59200BA54EC /* ReceiptListInteractorTests.swift */; };
+		AF70C83A2C25EE3B00BA54EC /* ReceiptListRouterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF70C8392C25EE3B00BA54EC /* ReceiptListRouterTests.swift */; };
+		AF70C83C2C25F53E00BA54EC /* NavigationControllerSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF70C83B2C25F53E00BA54EC /* NavigationControllerSpy.swift */; };
+		AF70C83F2C25FAD500BA54EC /* ReceiptDetailPresenterSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF70C83E2C25FAD500BA54EC /* ReceiptDetailPresenterSpy.swift */; };
+		AF70C8452C25FAF100BA54EC /* ReceiptDetailInteractorSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF70C8442C25FAF100BA54EC /* ReceiptDetailInteractorSpy.swift */; };
+		AF70C8472C25FB0000BA54EC /* ReceiptDetailViewControllerSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF70C8462C25FB0000BA54EC /* ReceiptDetailViewControllerSpy.swift */; };
+		AF70C8492C25FD0200BA54EC /* ReceiptDetailRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF70C8482C25FD0200BA54EC /* ReceiptDetailRouter.swift */; };
+		AF70C84B2C25FFE700BA54EC /* ReceiptDetailViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF70C84A2C25FFE700BA54EC /* ReceiptDetailViewControllerTests.swift */; };
+		AF70C84D2C25FFF900BA54EC /* ReceiptDetailPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF70C84C2C25FFF900BA54EC /* ReceiptDetailPresenterTests.swift */; };
+		AF70C84F2C26000200BA54EC /* ReceiptDetailInteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF70C84E2C26000200BA54EC /* ReceiptDetailInteractorTests.swift */; };
+		AF70C8512C26079500BA54EC /* ReceiptDetailViewSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF70C8502C26079500BA54EC /* ReceiptDetailViewSpy.swift */; };
 		AF81F2312C238DEA00E35765 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF81F2302C238DEA00E35765 /* AppDelegate.swift */; };
 		AF81F2332C238DEA00E35765 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF81F2322C238DEA00E35765 /* SceneDelegate.swift */; };
-		AF81F2352C238DEA00E35765 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF81F2342C238DEA00E35765 /* ViewController.swift */; };
 		AF81F23A2C238DEA00E35765 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AF81F2392C238DEA00E35765 /* Assets.xcassets */; };
 		AF81F23D2C238DEA00E35765 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF81F23B2C238DEA00E35765 /* LaunchScreen.storyboard */; };
-		AF81F2482C238DEB00E35765 /* ItauChallengeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF81F2472C238DEB00E35765 /* ItauChallengeTests.swift */; };
 		AF81F2522C238DEB00E35765 /* ItauChallengeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF81F2512C238DEB00E35765 /* ItauChallengeUITests.swift */; };
 		AF81F2542C238DEB00E35765 /* ItauChallengeUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF81F2532C238DEB00E35765 /* ItauChallengeUITestsLaunchTests.swift */; };
 /* End PBXBuildFile section */
@@ -60,8 +78,6 @@
 		AF3DFA322C238FF6009D903C /* ReceiptListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReceiptListViewController.swift; sourceTree = "<group>"; };
 		AF3DFA332C238FF6009D903C /* ReceiptListInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReceiptListInteractor.swift; sourceTree = "<group>"; };
 		AF3DFA3A2C239004009D903C /* ReceiptDetailPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReceiptDetailPresenter.swift; sourceTree = "<group>"; };
-		AF3DFA3B2C239004009D903C /* ReceiptDetailWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReceiptDetailWorker.swift; sourceTree = "<group>"; };
-		AF3DFA3C2C239004009D903C /* ReceiptDetailRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReceiptDetailRouter.swift; sourceTree = "<group>"; };
 		AF3DFA3D2C239004009D903C /* ReceiptDetailModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReceiptDetailModels.swift; sourceTree = "<group>"; };
 		AF3DFA3E2C239004009D903C /* ReceiptDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReceiptDetailViewController.swift; sourceTree = "<group>"; };
 		AF3DFA3F2C239004009D903C /* ReceiptDetailInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReceiptDetailInteractor.swift; sourceTree = "<group>"; };
@@ -71,15 +87,35 @@
 		AF70C7F32C24B69900BA54EC /* ReceiptEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReceiptEntity.swift; sourceTree = "<group>"; };
 		AF70C7F52C24B6B400BA54EC /* Pagination.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pagination.swift; sourceTree = "<group>"; };
 		AF70C7F82C24CF8F00BA54EC /* comprovantes.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = comprovantes.json; sourceTree = "<group>"; };
+		AF70C7FA2C24E1A100BA54EC /* ReceiptDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReceiptDetailView.swift; sourceTree = "<group>"; };
+		AF70C8012C25271A00BA54EC /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
+		AF70C8052C25AD0D00BA54EC /* LocalizableStrings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalizableStrings.swift; sourceTree = "<group>"; };
+		AF70C80B2C25B17000BA54EC /* Padding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Padding.swift; sourceTree = "<group>"; };
+		AF70C8102C25C1F400BA54EC /* ReceiptListWorkerSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReceiptListWorkerSpy.swift; sourceTree = "<group>"; };
+		AF70C8122C25C31000BA54EC /* ReceiptListPresenterSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReceiptListPresenterSpy.swift; sourceTree = "<group>"; };
+		AF70C8142C25C49400BA54EC /* ReceiptListRouterSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReceiptListRouterSpy.swift; sourceTree = "<group>"; };
+		AF70C8162C25C70100BA54EC /* ReceiptListInteractorSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReceiptListInteractorSpy.swift; sourceTree = "<group>"; };
+		AF70C81A2C25C99E00BA54EC /* ReceiptListViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReceiptListViewControllerTests.swift; sourceTree = "<group>"; };
+		AF70C81C2C25D3E500BA54EC /* ReceiptListPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReceiptListPresenterTests.swift; sourceTree = "<group>"; };
+		AF70C8322C25DB8400BA54EC /* ReceiptListViewControllerSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReceiptListViewControllerSpy.swift; sourceTree = "<group>"; };
+		AF70C8372C25E59200BA54EC /* ReceiptListInteractorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReceiptListInteractorTests.swift; sourceTree = "<group>"; };
+		AF70C8392C25EE3B00BA54EC /* ReceiptListRouterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReceiptListRouterTests.swift; sourceTree = "<group>"; };
+		AF70C83B2C25F53E00BA54EC /* NavigationControllerSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationControllerSpy.swift; sourceTree = "<group>"; };
+		AF70C83E2C25FAD500BA54EC /* ReceiptDetailPresenterSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReceiptDetailPresenterSpy.swift; sourceTree = "<group>"; };
+		AF70C8442C25FAF100BA54EC /* ReceiptDetailInteractorSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReceiptDetailInteractorSpy.swift; sourceTree = "<group>"; };
+		AF70C8462C25FB0000BA54EC /* ReceiptDetailViewControllerSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReceiptDetailViewControllerSpy.swift; sourceTree = "<group>"; };
+		AF70C8482C25FD0200BA54EC /* ReceiptDetailRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReceiptDetailRouter.swift; sourceTree = "<group>"; };
+		AF70C84A2C25FFE700BA54EC /* ReceiptDetailViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReceiptDetailViewControllerTests.swift; sourceTree = "<group>"; };
+		AF70C84C2C25FFF900BA54EC /* ReceiptDetailPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReceiptDetailPresenterTests.swift; sourceTree = "<group>"; };
+		AF70C84E2C26000200BA54EC /* ReceiptDetailInteractorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReceiptDetailInteractorTests.swift; sourceTree = "<group>"; };
+		AF70C8502C26079500BA54EC /* ReceiptDetailViewSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReceiptDetailViewSpy.swift; sourceTree = "<group>"; };
 		AF81F22D2C238DEA00E35765 /* ItauChallenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ItauChallenge.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AF81F2302C238DEA00E35765 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AF81F2322C238DEA00E35765 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		AF81F2342C238DEA00E35765 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		AF81F2392C238DEA00E35765 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AF81F23C2C238DEA00E35765 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AF81F23E2C238DEA00E35765 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AF81F2432C238DEB00E35765 /* ItauChallengeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ItauChallengeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		AF81F2472C238DEB00E35765 /* ItauChallengeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItauChallengeTests.swift; sourceTree = "<group>"; };
 		AF81F24D2C238DEB00E35765 /* ItauChallengeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ItauChallengeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AF81F2512C238DEB00E35765 /* ItauChallengeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItauChallengeUITests.swift; sourceTree = "<group>"; };
 		AF81F2532C238DEB00E35765 /* ItauChallengeUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItauChallengeUITestsLaunchTests.swift; sourceTree = "<group>"; };
@@ -151,10 +187,91 @@
 			path = Mock;
 			sourceTree = "<group>";
 		};
+		AF70C7FC2C2525C500BA54EC /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				AF70C8012C25271A00BA54EC /* Localizable.strings */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		AF70C8032C25ACF200BA54EC /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				AF70C80A2C25B13200BA54EC /* Constants */,
+				AF70C8042C25ACFB00BA54EC /* Localizable */,
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
+		AF70C8042C25ACFB00BA54EC /* Localizable */ = {
+			isa = PBXGroup;
+			children = (
+				AF70C8052C25AD0D00BA54EC /* LocalizableStrings.swift */,
+			);
+			path = Localizable;
+			sourceTree = "<group>";
+		};
+		AF70C80A2C25B13200BA54EC /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				AF70C80B2C25B17000BA54EC /* Padding.swift */,
+			);
+			path = Constants;
+			sourceTree = "<group>";
+		};
+		AF70C80F2C25C1DE00BA54EC /* Spy */ = {
+			isa = PBXGroup;
+			children = (
+				AF70C8122C25C31000BA54EC /* ReceiptListPresenterSpy.swift */,
+				AF70C8102C25C1F400BA54EC /* ReceiptListWorkerSpy.swift */,
+				AF70C8142C25C49400BA54EC /* ReceiptListRouterSpy.swift */,
+				AF70C8162C25C70100BA54EC /* ReceiptListInteractorSpy.swift */,
+				AF70C8322C25DB8400BA54EC /* ReceiptListViewControllerSpy.swift */,
+				AF70C83B2C25F53E00BA54EC /* NavigationControllerSpy.swift */,
+			);
+			path = Spy;
+			sourceTree = "<group>";
+		};
+		AF70C8182C25C8AD00BA54EC /* ReceiptList */ = {
+			isa = PBXGroup;
+			children = (
+				AF70C80F2C25C1DE00BA54EC /* Spy */,
+				AF70C81A2C25C99E00BA54EC /* ReceiptListViewControllerTests.swift */,
+				AF70C81C2C25D3E500BA54EC /* ReceiptListPresenterTests.swift */,
+				AF70C8372C25E59200BA54EC /* ReceiptListInteractorTests.swift */,
+				AF70C8392C25EE3B00BA54EC /* ReceiptListRouterTests.swift */,
+			);
+			path = ReceiptList;
+			sourceTree = "<group>";
+		};
+		AF70C8192C25C8C700BA54EC /* ReceiptDetail */ = {
+			isa = PBXGroup;
+			children = (
+				AF70C83D2C25FAAA00BA54EC /* Spy */,
+				AF70C84A2C25FFE700BA54EC /* ReceiptDetailViewControllerTests.swift */,
+				AF70C84C2C25FFF900BA54EC /* ReceiptDetailPresenterTests.swift */,
+				AF70C84E2C26000200BA54EC /* ReceiptDetailInteractorTests.swift */,
+			);
+			path = ReceiptDetail;
+			sourceTree = "<group>";
+		};
+		AF70C83D2C25FAAA00BA54EC /* Spy */ = {
+			isa = PBXGroup;
+			children = (
+				AF70C83E2C25FAD500BA54EC /* ReceiptDetailPresenterSpy.swift */,
+				AF70C8442C25FAF100BA54EC /* ReceiptDetailInteractorSpy.swift */,
+				AF70C8462C25FB0000BA54EC /* ReceiptDetailViewControllerSpy.swift */,
+				AF70C8502C26079500BA54EC /* ReceiptDetailViewSpy.swift */,
+			);
+			path = Spy;
+			sourceTree = "<group>";
+		};
 		AF81F2242C238DEA00E35765 = {
 			isa = PBXGroup;
 			children = (
 				AF81F22F2C238DEA00E35765 /* ItauChallenge */,
+				AF81F23B2C238DEA00E35765 /* LaunchScreen.storyboard */,
 				AF81F2462C238DEB00E35765 /* ItauChallengeTests */,
 				AF81F2502C238DEB00E35765 /* ItauChallengeUITests */,
 				AF81F22E2C238DEA00E35765 /* Products */,
@@ -174,16 +291,16 @@
 		AF81F22F2C238DEA00E35765 /* ItauChallenge */ = {
 			isa = PBXGroup;
 			children = (
-				AF81F2622C238E7300E35765 /* Scene */,
-				AF3DFA462C239364009D903C /* Protocol */,
-				AF70C7F22C24B66900BA54EC /* Model */,
-				AF70C7F72C24CF8100BA54EC /* Mock */,
 				AF81F2302C238DEA00E35765 /* AppDelegate.swift */,
-				AF81F2322C238DEA00E35765 /* SceneDelegate.swift */,
-				AF81F2342C238DEA00E35765 /* ViewController.swift */,
 				AF81F2392C238DEA00E35765 /* Assets.xcassets */,
-				AF81F23B2C238DEA00E35765 /* LaunchScreen.storyboard */,
+				AF70C8032C25ACF200BA54EC /* Helper */,
 				AF81F23E2C238DEA00E35765 /* Info.plist */,
+				AF70C7F72C24CF8100BA54EC /* Mock */,
+				AF70C7F22C24B66900BA54EC /* Model */,
+				AF3DFA462C239364009D903C /* Protocol */,
+				AF70C7FC2C2525C500BA54EC /* Resources */,
+				AF81F2622C238E7300E35765 /* Scene */,
+				AF81F2322C238DEA00E35765 /* SceneDelegate.swift */,
 			);
 			path = ItauChallenge;
 			sourceTree = "<group>";
@@ -191,7 +308,8 @@
 		AF81F2462C238DEB00E35765 /* ItauChallengeTests */ = {
 			isa = PBXGroup;
 			children = (
-				AF81F2472C238DEB00E35765 /* ItauChallengeTests.swift */,
+				AF70C8192C25C8C700BA54EC /* ReceiptDetail */,
+				AF70C8182C25C8AD00BA54EC /* ReceiptList */,
 			);
 			path = ItauChallengeTests;
 			sourceTree = "<group>";
@@ -232,11 +350,11 @@
 			isa = PBXGroup;
 			children = (
 				AF3DFA3A2C239004009D903C /* ReceiptDetailPresenter.swift */,
-				AF3DFA3B2C239004009D903C /* ReceiptDetailWorker.swift */,
-				AF3DFA3C2C239004009D903C /* ReceiptDetailRouter.swift */,
 				AF3DFA3D2C239004009D903C /* ReceiptDetailModels.swift */,
 				AF3DFA3E2C239004009D903C /* ReceiptDetailViewController.swift */,
+				AF70C8482C25FD0200BA54EC /* ReceiptDetailRouter.swift */,
 				AF3DFA3F2C239004009D903C /* ReceiptDetailInteractor.swift */,
+				AF70C7FA2C24E1A100BA54EC /* ReceiptDetailView.swift */,
 			);
 			path = ReceiptDetail;
 			sourceTree = "<group>";
@@ -355,6 +473,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AF81F23D2C238DEA00E35765 /* LaunchScreen.storyboard in Resources */,
+				AF70C8022C25271A00BA54EC /* Localizable.strings in Resources */,
 				AF81F23A2C238DEA00E35765 /* Assets.xcassets in Resources */,
 				AF70C7F92C24CF8F00BA54EC /* comprovantes.json in Resources */,
 			);
@@ -384,22 +503,23 @@
 				AF3DFA442C239004009D903C /* ReceiptDetailViewController.swift in Sources */,
 				AF3DFA372C238FF6009D903C /* ReceiptListModels.swift in Sources */,
 				AF70C7F42C24B69900BA54EC /* ReceiptEntity.swift in Sources */,
+				AF70C7FB2C24E1A100BA54EC /* ReceiptDetailView.swift in Sources */,
 				AF3DFA382C238FF6009D903C /* ReceiptListViewController.swift in Sources */,
 				AF3DFA352C238FF6009D903C /* ReceiptListWorker.swift in Sources */,
-				AF81F2352C238DEA00E35765 /* ViewController.swift in Sources */,
 				AF3DFA392C238FF6009D903C /* ReceiptListInteractor.swift in Sources */,
 				AF3DFA342C238FF6009D903C /* ReceiptListPresenter.swift in Sources */,
 				AF3DFA402C239004009D903C /* ReceiptDetailPresenter.swift in Sources */,
+				AF70C80C2C25B17000BA54EC /* Padding.swift in Sources */,
 				AF3DFA4B2C23951C009D903C /* ReceiptListView.swift in Sources */,
 				AF81F2312C238DEA00E35765 /* AppDelegate.swift in Sources */,
 				AF3DFA452C239004009D903C /* ReceiptDetailInteractor.swift in Sources */,
 				AF3DFA432C239004009D903C /* ReceiptDetailModels.swift in Sources */,
+				AF70C8492C25FD0200BA54EC /* ReceiptDetailRouter.swift in Sources */,
 				AF3DFA4E2C2396E9009D903C /* ReceiptCellTableViewCell.swift in Sources */,
-				AF3DFA422C239004009D903C /* ReceiptDetailRouter.swift in Sources */,
+				AF70C8062C25AD0D00BA54EC /* LocalizableStrings.swift in Sources */,
 				AF81F2332C238DEA00E35765 /* SceneDelegate.swift in Sources */,
 				AF3DFA362C238FF6009D903C /* ReceiptListRouter.swift in Sources */,
 				AF70C7F62C24B6B400BA54EC /* Pagination.swift in Sources */,
-				AF3DFA412C239004009D903C /* ReceiptDetailWorker.swift in Sources */,
 				AF3DFA492C2394EA009D903C /* ViewCode.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -408,7 +528,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AF81F2482C238DEB00E35765 /* ItauChallengeTests.swift in Sources */,
+				AF70C8172C25C70100BA54EC /* ReceiptListInteractorSpy.swift in Sources */,
+				AF70C83F2C25FAD500BA54EC /* ReceiptDetailPresenterSpy.swift in Sources */,
+				AF70C84F2C26000200BA54EC /* ReceiptDetailInteractorTests.swift in Sources */,
+				AF70C8332C25DB8400BA54EC /* ReceiptListViewControllerSpy.swift in Sources */,
+				AF70C8382C25E59200BA54EC /* ReceiptListInteractorTests.swift in Sources */,
+				AF70C8472C25FB0000BA54EC /* ReceiptDetailViewControllerSpy.swift in Sources */,
+				AF70C8112C25C1F400BA54EC /* ReceiptListWorkerSpy.swift in Sources */,
+				AF70C8152C25C49400BA54EC /* ReceiptListRouterSpy.swift in Sources */,
+				AF70C8132C25C31000BA54EC /* ReceiptListPresenterSpy.swift in Sources */,
+				AF70C8512C26079500BA54EC /* ReceiptDetailViewSpy.swift in Sources */,
+				AF70C84B2C25FFE700BA54EC /* ReceiptDetailViewControllerTests.swift in Sources */,
+				AF70C83C2C25F53E00BA54EC /* NavigationControllerSpy.swift in Sources */,
+				AF70C81B2C25C99E00BA54EC /* ReceiptListViewControllerTests.swift in Sources */,
+				AF70C84D2C25FFF900BA54EC /* ReceiptDetailPresenterTests.swift in Sources */,
+				AF70C83A2C25EE3B00BA54EC /* ReceiptListRouterTests.swift in Sources */,
+				AF70C8452C25FAF100BA54EC /* ReceiptDetailInteractorSpy.swift in Sources */,
+				AF70C81D2C25D3E500BA54EC /* ReceiptListPresenterTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -8,6 +8,10 @@
 import Foundation
 import UIKit
 
+protocol ReceiptListViewDelegate: AnyObject {
+    func didSelectReceipt(receipt: ReceiptEntity)
+}
+
 class ReceiptListView: UIView {
     
     var receipts: [ReceiptEntity]? {
@@ -23,6 +27,8 @@ class ReceiptListView: UIView {
         tableView.register(ReceiptCellTableViewCell.self, forCellReuseIdentifier: "ReceiptCell")
         return tableView
     }()
+    
+    weak var delegate: ReceiptListViewDelegate?
     
     init() {
         super.init(frame: .zero)
@@ -58,7 +64,10 @@ extension ReceiptListView: UITableViewDataSource {
 
 extension ReceiptListView: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print("")
+        guard let receipt = receipts?[indexPath.row] else {
+            return
+        }
+        delegate?.didSelectReceipt(receipt: receipt)
     }
 }
 
@@ -72,10 +81,10 @@ extension ReceiptListView: ViewCode {
     func setupConstraints() {
     
         let constraints = [
-            receiptTableView.topAnchor.constraint(equalTo: self.topAnchor, constant: 0),
-            receiptTableView.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: 0),
-            receiptTableView.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 0),
-            receiptTableView.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: 0),
+            receiptTableView.topAnchor.constraint(equalTo: self.topAnchor),
+            receiptTableView.bottomAnchor.constraint(equalTo: self.bottomAnchor),
+            receiptTableView.leadingAnchor.constraint(equalTo: self.leadingAnchor),
+            receiptTableView.trailingAnchor.constraint(equalTo: self.trailingAnchor),
         ]
         
         NSLayoutConstraint.activate(constraints)

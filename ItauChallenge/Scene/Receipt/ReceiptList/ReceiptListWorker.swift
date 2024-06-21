@@ -13,16 +13,14 @@ enum ReceiptListError: Error {
     case decodeFailed
 }
 
-protocol ReceiptListWorkerProtocol: AnyObject
-{
+protocol ReceiptListWorkerProtocol: AnyObject {
     func fetchReceipt(page: Int, pageSize: Int, completion: @escaping ReceiptResponse)
 }
 
-class ReceiptListWorker: ReceiptListWorkerProtocol
-{
+class ReceiptListWorker: ReceiptListWorkerProtocol {
     func fetchReceipt(page: Int, pageSize: Int, completion: @escaping ReceiptResponse) {
-        let data = readLocalJSONFile(name: "comprovantes") ?? Data()
         do {
+            let data = try readLocalJSONFile(name: "comprovantes") ?? Data()
             let decodedData = try JSONDecoder().decode(ReceiptDataEntity.self, from: data)
             let pagination = PaginationEntity(page: 1, pageSize: 10, totalElements: 10, totalPages: 1)
             completion(.success((decodedData.receiptData.receipts, pagination)))
@@ -31,7 +29,7 @@ class ReceiptListWorker: ReceiptListWorkerProtocol
         }
     }
     
-    func readLocalJSONFile(name: String) -> Data? {
+    func readLocalJSONFile(name: String) throws -> Data? {
         do {
             if let filePath = Bundle.main.path(forResource: name, ofType: "json") {
                 let fileUrl = URL(fileURLWithPath: filePath)
@@ -39,7 +37,7 @@ class ReceiptListWorker: ReceiptListWorkerProtocol
                 return data
             }
         } catch {
-            print("error: \(error)")
+            throw(ReceiptListError.decodeFailed)
         }
         return nil
     }
