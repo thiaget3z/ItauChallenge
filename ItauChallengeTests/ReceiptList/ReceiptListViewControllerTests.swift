@@ -9,7 +9,7 @@ import XCTest
 @testable import ItauChallenge
 
 final class ReceiptListViewControllerTests: XCTestCase {
-    var viewController: ReceiptListViewController?
+    var sut: ReceiptListViewController?
     var interactorSpy: ReceiptListInteractorSpy?
     var presenterSpy: ReceiptListPresenterSpy?
     var workerSpy: ReceiptListWorkerSpy?
@@ -28,7 +28,7 @@ final class ReceiptListViewControllerTests: XCTestCase {
         controller.router = routerSpy
         
         receipt = ReceiptEntity(title: "Titulo", receiptId: "123", name: "Name", receiverName: "Receiver Name", amount: "R$ 100,00", control: "ABCD", date: "qua, 27 de abril de 2022")
-        self.viewController = controller
+        self.sut = controller
         self.interactorSpy = interactorSpy
         self.presenterSpy = presenterSpy
         self.workerSpy = workerSpy
@@ -36,14 +36,14 @@ final class ReceiptListViewControllerTests: XCTestCase {
     }
 
     override func tearDown() {
-        viewController = nil
+        sut = nil
         interactorSpy = nil
         super.tearDown()
     }
 
     func testViewDidLoadCallsInteractorFetchReceipts() {
         // Given
-        guard let viewController = self.viewController, let interactorSpy = interactorSpy else {
+        guard let viewController = self.sut, let interactorSpy = interactorSpy else {
             XCTFail("Should not be nil")
             return
         }
@@ -57,7 +57,7 @@ final class ReceiptListViewControllerTests: XCTestCase {
     
     func testDidSelectReceiptCallsRouter() {
         // Given
-        guard let viewController = self.viewController, let routerSpy = routerSpy, let receipt = receipt else {
+        guard let viewController = self.sut, let routerSpy = routerSpy, let receipt = receipt else {
             XCTFail("Should not be nil")
             return
         }

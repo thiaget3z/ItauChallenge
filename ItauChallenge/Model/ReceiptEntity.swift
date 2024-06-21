@@ -16,6 +16,7 @@ struct ReceiptDataEntity: Decodable {
 
 struct ReceiptListEntity: Decodable {
     let receipts: [ReceiptEntity]
+    let pagination: PaginationEntity
 }
 
 

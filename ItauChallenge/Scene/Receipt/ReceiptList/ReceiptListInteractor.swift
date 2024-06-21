@@ -7,37 +7,50 @@
 
 import UIKit
 
+// MARK: - Protocols
+
 protocol ReceiptListBusinessLogic {
     func requestReceipt(request: ReceiptList.FetchReceipts.Request)
 }
 
 protocol ReceiptListDataStore { }
 
+// MARK: - ReceiptListInteractor
+
 class ReceiptListInteractor: ReceiptListBusinessLogic, ReceiptListDataStore {
-    var presenter: ReceiptListPresentationLogic?
-    var worker: ReceiptListWorkerProtocol?
+    
+    // MARK: - Properties
+    
+    private var presenter: ReceiptListPresentationLogic?
+    private var worker: ReceiptListWorkerProtocol?
+    
+    
+    // MARK: - Constants
+    let initialPage = 1
+    let initialPageSize = 10
+    
+    // MARK: - Initializer
     
     init(presenter: ReceiptListPresentationLogic, worker: ReceiptListWorkerProtocol) {
         self.presenter = presenter
         self.worker = worker
     }
     
+    // MARK: - Business Logic
+    
     func requestReceipt(request: ReceiptList.FetchReceipts.Request) {
-        worker?.fetchReceipt(page: 1, pageSize: 10, completion: { [self] result in
+        worker?.fetchReceipt(page: initialPage, pageSize: initialPageSize, completion: { [weak self] result in
+          
             switch result {
-                
-            case .success(let (receipts, pagination)):
-                let response = ReceiptList.FetchReceipts.Response(receipts: receipts, pagination: pagination)
-                presenter?.presentReceipt(response: response)
-                
+            case .success(let receiptListEntity):
+                let response = ReceiptList.FetchReceipts.Response(receipts: receiptListEntity.receipts, pagination: receiptListEntity.pagination)
+                self?.presenter?.presentReceipt(response: response)
             case .failure(let error):
-                switch error {
-                
-                case .decodeFailed:
-                    print("Error")
-                }
-                
+                // should call presenter to show error
+                break
             }
+            
         })
+        
     }
 }

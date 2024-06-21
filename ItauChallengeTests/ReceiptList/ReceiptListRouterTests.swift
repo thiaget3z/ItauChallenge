@@ -15,7 +15,7 @@ final class ReceiptListRouterTests: XCTestCase {
     
     override func setUp() {
         super.setUp()
-        var viewController = ReceiptListViewController()
+        let viewController = ReceiptListViewController()
         self.navController = NavigationControllerSpy(rootViewController: viewController)
         sut = ReceiptListRouter(viewController: viewController)
     }

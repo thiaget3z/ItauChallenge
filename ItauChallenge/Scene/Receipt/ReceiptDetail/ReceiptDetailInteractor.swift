@@ -3,8 +3,11 @@
 //  ItauChallenge
 //
 //  Created by Thiago Lima on 19/06/24.
+//
 
 import Foundation
+
+// MARK: - Protocols
 
 protocol ReceiptDetailBusinessLogic {
     func requestReceipt(request: ReceiptDetail.RequestReceiptDetail.Request)
@@ -13,6 +16,8 @@ protocol ReceiptDetailBusinessLogic {
 protocol ReceiptDetailDataStore {
     var receipt: ReceiptEntity? { get set }
 }
+
+// MARK: - ReceiptDetailInteractor
 
 class ReceiptDetailInteractor: ReceiptDetailBusinessLogic, ReceiptDetailDataStore {
     var receipt: ReceiptEntity?
@@ -27,5 +32,4 @@ class ReceiptDetailInteractor: ReceiptDetailBusinessLogic, ReceiptDetailDataStor
         let response = ReceiptDetail.RequestReceiptDetail.Response(receipt: receipt)
         presenter?.presentReceipt(response: response)
     }
-    
 }

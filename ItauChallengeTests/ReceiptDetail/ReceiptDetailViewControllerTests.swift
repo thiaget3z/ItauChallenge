@@ -9,7 +9,7 @@ import XCTest
 @testable import ItauChallenge
 
 final class ReceiptDetailViewControllerTests: XCTestCase {
-    var viewController: ReceiptDetailViewController?
+    var sut: ReceiptDetailViewController?
     var interactorSpy: ReceiptDetailInteractorSpy?
     var presenterSpy: ReceiptDetailPresenterSpy?
     var viewSpy: ReceiptDetailViewSpy?
@@ -26,7 +26,7 @@ final class ReceiptDetailViewControllerTests: XCTestCase {
         controller.interactor = interactorSpy
         receipt = ReceiptEntity(title: "Titulo", receiptId: "123", name: "Name", receiverName: "Receiver Name", amount: "R$ 100,00", control: "ABCD", date: "qua, 27 de abril de 2022")
         
-        self.viewController = controller
+        self.sut = controller
         self.interactorSpy = interactorSpy
         self.presenterSpy = presenterSpy
         self.viewSpy = viewSpy
@@ -34,14 +34,14 @@ final class ReceiptDetailViewControllerTests: XCTestCase {
     }
 
     override func tearDown() {
-        viewController = nil
+        sut = nil
         interactorSpy = nil
         super.tearDown()
     }
 
     func testViewWillAppearCallsInteractorRequestReceipts() {
         // Given
-        guard let viewController = self.viewController, let interactorSpy = interactorSpy else {
+        guard let viewController = sut, let interactorSpy = interactorSpy else {
             XCTFail("Should not be nil")
             return
         }
@@ -56,16 +56,17 @@ final class ReceiptDetailViewControllerTests: XCTestCase {
     
     func testDisplayReceiptCallsSetupView() {
         // Given
-        guard let viewController = self.viewController, let receipt = receipt, let viewSpy = viewSpy else {
+        guard let viewController = sut, let receipt = receipt, let viewSpy = viewSpy else {
             XCTFail("Should not be nil")
             return
         }
+        let viewModel = ReceiptDetail.RequestReceiptDetail.ViewModel(title: receipt.title, receiptId: receipt.receiptId, name: receipt.name, receiverName: receipt.receiverName, amount: receipt.amount, control: receipt.control, date: receipt.date)
         
         // When
-        presenterSpy?.presentReceipt(response: ReceiptDetail.RequestReceiptDetail.Response(receipt: receipt))
+        viewController.displayReceipt(viewModel: viewModel)
         
         // Then
         XCTAssertTrue(viewSpy.setupViewCalled)
-        XCTAssertEqual(viewSpy.viewModelReceived?.control, receipt.control)
+        XCTAssertEqual(viewSpy.viewModelReceived?.receiptId, viewModel.receiptId)
     }
 }

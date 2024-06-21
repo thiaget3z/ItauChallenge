@@ -7,9 +7,13 @@
 
 import UIKit
 
+// MARK: - Protocols
+
 protocol ReceiptListPresentationLogic {
     func presentReceipt(response: ReceiptList.FetchReceipts.Response)
 }
+
+// MARK: - ReceiptListPresenter
 
 class ReceiptListPresenter: ReceiptListPresentationLogic {
     
@@ -18,8 +22,6 @@ class ReceiptListPresenter: ReceiptListPresentationLogic {
     init(viewController: ReceiptListDisplayLogic) {
         self.viewController = viewController
     }
-    
-    // MARK: Do something
     
     func presentReceipt(response: ReceiptList.FetchReceipts.Response) {
         let viewModel = ReceiptList.FetchReceipts.ViewModel(displayReceipts: response.receipts,

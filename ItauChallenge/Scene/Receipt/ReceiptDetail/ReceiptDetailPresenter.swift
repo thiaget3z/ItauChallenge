@@ -3,12 +3,17 @@
 //  ItauChallenge
 //
 //  Created by Thiago Lima on 19/06/24.
+//
 
 import Foundation
+
+// MARK: - Protocols
 
 protocol ReceiptDetailPresentationLogic {
     func presentReceipt(response: ReceiptDetail.RequestReceiptDetail.Response)
 }
+
+// MARK: - ReceiptDetailPresenter
 
 class ReceiptDetailPresenter: ReceiptDetailPresentationLogic {
     weak var viewController: ReceiptDetailDisplayLogic?
@@ -17,11 +22,12 @@ class ReceiptDetailPresenter: ReceiptDetailPresentationLogic {
         self.viewController = viewController
     }
     
-    func presentReceipt(response: ReceiptDetail.RequestReceiptDetail.Response)
-    {
+    func presentReceipt(response: ReceiptDetail.RequestReceiptDetail.Response) {
         let receiptViewModel = getFormattedReceipt(receipt: response.receipt)
         viewController?.displayReceipt(viewModel: receiptViewModel)
     }
+    
+    // MARK: - Helper Methods
     
     private func getFormattedReceipt(receipt: ReceiptEntity) -> ReceiptDetail.RequestReceiptDetail.ViewModel {
         let title = receipt.title
@@ -36,15 +42,15 @@ class ReceiptDetailPresenter: ReceiptDetailPresentationLogic {
         return ReceiptDetail.RequestReceiptDetail.ViewModel(title: title, receiptId: receiptId, name: name, receiverName: receiverName, amount: amount, control: control, date: date)
     }
     
-    private func formattedDate(date:String) -> String {
+    private func formattedDate(date: String) -> String {
         let dateFormatter = DateFormatter()
-        dateFormatter.locale = Locale(identifier: "pt_BR")
-        dateFormatter.dateFormat = "EEE, dd 'de' MMMM 'de' yyyy"
+        dateFormatter.locale = Locale(identifier: LocalizableStrings.preferedDateLanguage.localized())
+        dateFormatter.dateFormat = LocalizableStrings.dateFormatReceived.localized()
         guard let formattedDate = dateFormatter.date(from: date) else {
             return date
         }
         
-        dateFormatter.dateFormat = "EEEE, dd 'de' MMMM 'de' yyyy"
+        dateFormatter.dateFormat = LocalizableStrings.dateFormatCorrected.localized()
         return dateFormatter.string(from: formattedDate)
     }
 }

@@ -7,26 +7,29 @@
 
 import UIKit
 
+// MARK: - Protocols
+
 protocol ReceiptListDisplayLogic: AnyObject {
     func displayReceipt(viewModel: ReceiptList.FetchReceipts.ViewModel)
 }
 
+// MARK: - ReceiptListViewController
+
 class ReceiptListViewController: UIViewController, ReceiptListDisplayLogic {
+        
+    private var interactor: ReceiptListBusinessLogic?
     
     let receiptView = ReceiptListView()
-    
-    var interactor: ReceiptListBusinessLogic?
     var router: (ReceiptListRoutingLogic & ReceiptListDataPassing)?
     
-    // MARK: Object lifecycle
+    // MARK: - Object lifecycle
     
     init() {
         super.init(nibName: nil, bundle: nil)
         self.setup()
     }
     
-    required init?(coder aDecoder: NSCoder)
-    {
+    required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     
@@ -35,10 +38,9 @@ class ReceiptListViewController: UIViewController, ReceiptListDisplayLogic {
         view = receiptView
     }
     
-    // MARK: Setup
+    // MARK: - Setup
     
-    private func setup()
-    {
+    private func setup() {
         let presenter = ReceiptListPresenter(viewController: self)
         let interactor = ReceiptListInteractor(presenter: presenter, worker: ReceiptListWorker())
         let router = ReceiptListRouter(viewController: self, dataStore: interactor)
@@ -48,10 +50,9 @@ class ReceiptListViewController: UIViewController, ReceiptListDisplayLogic {
         title = LocalizableStrings.receiptListTitle.localized()
     }
 
-    // MARK: View lifecycle
+    // MARK: - View lifecycle
     
-    override func viewDidLoad()
-    {
+    override func viewDidLoad() {
         super.viewDidLoad()
         let request = ReceiptList.FetchReceipts.Request()
         interactor?.requestReceipt(request: request)
@@ -62,12 +63,13 @@ class ReceiptListViewController: UIViewController, ReceiptListDisplayLogic {
     }
 }
 
+// MARK: - ReceiptListViewDelegate
+
 extension ReceiptListViewController: ReceiptListViewDelegate {
     
-    // MARK: Routing
+    // MARK: - Routing
     
     func didSelectReceipt(receipt: ReceiptEntity) {
         router?.routeToDetail(receiptEntity: receipt)
     }
-    
 }

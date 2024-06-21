@@ -11,8 +11,10 @@ protocol ReceiptDetailDisplayLogic: AnyObject {
 }
 
 class ReceiptDetailViewController: UIViewController, ReceiptDetailDisplayLogic {
+   
+    private var interactor: ReceiptDetailBusinessLogic?
+    
     var receiptDetailView = ReceiptDetailView()
-    var interactor: ReceiptDetailBusinessLogic?
     var router: (ReceiptDetailRoutingLogic & ReceiptDetailDataPassing)?
     
     // MARK: Object lifecycle
@@ -26,12 +28,17 @@ class ReceiptDetailViewController: UIViewController, ReceiptDetailDisplayLogic {
         fatalError("init(coder:) has not been implemented")
     }
     
+    override func loadView() {
+        super.loadView()
+        view = receiptDetailView
+    }
+    
     // MARK: Setup
     
     private func setup() {
         let presenter = ReceiptDetailPresenter(viewController: self)
         let interactor = ReceiptDetailInteractor(presenter: presenter)
-        let router = ReceiptDetailRouter()
+        let router = ReceiptDetailRouter(viewController: self)
         
         router.dataStore = interactor
         interactor.presenter = presenter
@@ -39,7 +46,6 @@ class ReceiptDetailViewController: UIViewController, ReceiptDetailDisplayLogic {
         
         self.router = router
         self.interactor = interactor
-        view = receiptDetailView
     }
     
     // MARK: View lifecycle

@@ -45,23 +45,17 @@
 		AF70C84D2C25FFF900BA54EC /* ReceiptDetailPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF70C84C2C25FFF900BA54EC /* ReceiptDetailPresenterTests.swift */; };
 		AF70C84F2C26000200BA54EC /* ReceiptDetailInteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF70C84E2C26000200BA54EC /* ReceiptDetailInteractorTests.swift */; };
 		AF70C8512C26079500BA54EC /* ReceiptDetailViewSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF70C8502C26079500BA54EC /* ReceiptDetailViewSpy.swift */; };
+		AF70C8532C262BAE00BA54EC /* JSONWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF70C8522C262BAE00BA54EC /* JSONWorker.swift */; };
+		AF70C8562C262EA100BA54EC /* APIWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF70C8552C262EA100BA54EC /* APIWorker.swift */; };
+		AF70C8592C262EFD00BA54EC /* DataReceiverProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF70C8582C262EFD00BA54EC /* DataReceiverProtocol.swift */; };
 		AF81F2312C238DEA00E35765 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF81F2302C238DEA00E35765 /* AppDelegate.swift */; };
 		AF81F2332C238DEA00E35765 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF81F2322C238DEA00E35765 /* SceneDelegate.swift */; };
 		AF81F23A2C238DEA00E35765 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AF81F2392C238DEA00E35765 /* Assets.xcassets */; };
 		AF81F23D2C238DEA00E35765 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF81F23B2C238DEA00E35765 /* LaunchScreen.storyboard */; };
-		AF81F2522C238DEB00E35765 /* ItauChallengeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF81F2512C238DEB00E35765 /* ItauChallengeUITests.swift */; };
-		AF81F2542C238DEB00E35765 /* ItauChallengeUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF81F2532C238DEB00E35765 /* ItauChallengeUITestsLaunchTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
 		AF81F2442C238DEB00E35765 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = AF81F2252C238DEA00E35765 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = AF81F22C2C238DEA00E35765;
-			remoteInfo = ItauChallenge;
-		};
-		AF81F24E2C238DEB00E35765 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = AF81F2252C238DEA00E35765 /* Project object */;
 			proxyType = 1;
@@ -109,6 +103,9 @@
 		AF70C84C2C25FFF900BA54EC /* ReceiptDetailPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReceiptDetailPresenterTests.swift; sourceTree = "<group>"; };
 		AF70C84E2C26000200BA54EC /* ReceiptDetailInteractorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReceiptDetailInteractorTests.swift; sourceTree = "<group>"; };
 		AF70C8502C26079500BA54EC /* ReceiptDetailViewSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReceiptDetailViewSpy.swift; sourceTree = "<group>"; };
+		AF70C8522C262BAE00BA54EC /* JSONWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONWorker.swift; sourceTree = "<group>"; };
+		AF70C8552C262EA100BA54EC /* APIWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIWorker.swift; sourceTree = "<group>"; };
+		AF70C8582C262EFD00BA54EC /* DataReceiverProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataReceiverProtocol.swift; sourceTree = "<group>"; };
 		AF81F22D2C238DEA00E35765 /* ItauChallenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ItauChallenge.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AF81F2302C238DEA00E35765 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AF81F2322C238DEA00E35765 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -116,9 +113,6 @@
 		AF81F23C2C238DEA00E35765 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AF81F23E2C238DEA00E35765 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AF81F2432C238DEB00E35765 /* ItauChallengeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ItauChallengeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		AF81F24D2C238DEB00E35765 /* ItauChallengeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ItauChallengeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		AF81F2512C238DEB00E35765 /* ItauChallengeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItauChallengeUITests.swift; sourceTree = "<group>"; };
-		AF81F2532C238DEB00E35765 /* ItauChallengeUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItauChallengeUITestsLaunchTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -130,13 +124,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		AF81F2402C238DEB00E35765 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		AF81F24A2C238DEB00E35765 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -267,13 +254,30 @@
 			path = Spy;
 			sourceTree = "<group>";
 		};
+		AF70C8542C262C9600BA54EC /* Worker */ = {
+			isa = PBXGroup;
+			children = (
+				AF70C8572C262EE500BA54EC /* Protocol */,
+				AF70C8522C262BAE00BA54EC /* JSONWorker.swift */,
+				AF70C8552C262EA100BA54EC /* APIWorker.swift */,
+			);
+			path = Worker;
+			sourceTree = "<group>";
+		};
+		AF70C8572C262EE500BA54EC /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				AF70C8582C262EFD00BA54EC /* DataReceiverProtocol.swift */,
+			);
+			path = Protocol;
+			sourceTree = "<group>";
+		};
 		AF81F2242C238DEA00E35765 = {
 			isa = PBXGroup;
 			children = (
 				AF81F22F2C238DEA00E35765 /* ItauChallenge */,
 				AF81F23B2C238DEA00E35765 /* LaunchScreen.storyboard */,
 				AF81F2462C238DEB00E35765 /* ItauChallengeTests */,
-				AF81F2502C238DEB00E35765 /* ItauChallengeUITests */,
 				AF81F22E2C238DEA00E35765 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -283,7 +287,6 @@
 			children = (
 				AF81F22D2C238DEA00E35765 /* ItauChallenge.app */,
 				AF81F2432C238DEB00E35765 /* ItauChallengeTests.xctest */,
-				AF81F24D2C238DEB00E35765 /* ItauChallengeUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -299,6 +302,7 @@
 				AF70C7F22C24B66900BA54EC /* Model */,
 				AF3DFA462C239364009D903C /* Protocol */,
 				AF70C7FC2C2525C500BA54EC /* Resources */,
+				AF70C8542C262C9600BA54EC /* Worker */,
 				AF81F2622C238E7300E35765 /* Scene */,
 				AF81F2322C238DEA00E35765 /* SceneDelegate.swift */,
 			);
@@ -312,15 +316,6 @@
 				AF70C8182C25C8AD00BA54EC /* ReceiptList */,
 			);
 			path = ItauChallengeTests;
-			sourceTree = "<group>";
-		};
-		AF81F2502C238DEB00E35765 /* ItauChallengeUITests */ = {
-			isa = PBXGroup;
-			children = (
-				AF81F2512C238DEB00E35765 /* ItauChallengeUITests.swift */,
-				AF81F2532C238DEB00E35765 /* ItauChallengeUITestsLaunchTests.swift */,
-			);
-			path = ItauChallengeUITests;
 			sourceTree = "<group>";
 		};
 		AF81F2622C238E7300E35765 /* Scene */ = {
@@ -406,24 +401,6 @@
 			productReference = AF81F2432C238DEB00E35765 /* ItauChallengeTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		AF81F24C2C238DEB00E35765 /* ItauChallengeUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = AF81F25D2C238DEB00E35765 /* Build configuration list for PBXNativeTarget "ItauChallengeUITests" */;
-			buildPhases = (
-				AF81F2492C238DEB00E35765 /* Sources */,
-				AF81F24A2C238DEB00E35765 /* Frameworks */,
-				AF81F24B2C238DEB00E35765 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				AF81F24F2C238DEB00E35765 /* PBXTargetDependency */,
-			);
-			name = ItauChallengeUITests;
-			productName = ItauChallengeUITests;
-			productReference = AF81F24D2C238DEB00E35765 /* ItauChallengeUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -438,10 +415,6 @@
 						CreatedOnToolsVersion = 15.2;
 					};
 					AF81F2422C238DEB00E35765 = {
-						CreatedOnToolsVersion = 15.2;
-						TestTargetID = AF81F22C2C238DEA00E35765;
-					};
-					AF81F24C2C238DEB00E35765 = {
 						CreatedOnToolsVersion = 15.2;
 						TestTargetID = AF81F22C2C238DEA00E35765;
 					};
@@ -462,7 +435,6 @@
 			targets = (
 				AF81F22C2C238DEA00E35765 /* ItauChallenge */,
 				AF81F2422C238DEB00E35765 /* ItauChallengeTests */,
-				AF81F24C2C238DEB00E35765 /* ItauChallengeUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -486,13 +458,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		AF81F24B2C238DEB00E35765 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -509,10 +474,12 @@
 				AF3DFA392C238FF6009D903C /* ReceiptListInteractor.swift in Sources */,
 				AF3DFA342C238FF6009D903C /* ReceiptListPresenter.swift in Sources */,
 				AF3DFA402C239004009D903C /* ReceiptDetailPresenter.swift in Sources */,
+				AF70C8562C262EA100BA54EC /* APIWorker.swift in Sources */,
 				AF70C80C2C25B17000BA54EC /* Padding.swift in Sources */,
 				AF3DFA4B2C23951C009D903C /* ReceiptListView.swift in Sources */,
 				AF81F2312C238DEA00E35765 /* AppDelegate.swift in Sources */,
 				AF3DFA452C239004009D903C /* ReceiptDetailInteractor.swift in Sources */,
+				AF70C8592C262EFD00BA54EC /* DataReceiverProtocol.swift in Sources */,
 				AF3DFA432C239004009D903C /* ReceiptDetailModels.swift in Sources */,
 				AF70C8492C25FD0200BA54EC /* ReceiptDetailRouter.swift in Sources */,
 				AF3DFA4E2C2396E9009D903C /* ReceiptCellTableViewCell.swift in Sources */,
@@ -521,6 +488,7 @@
 				AF3DFA362C238FF6009D903C /* ReceiptListRouter.swift in Sources */,
 				AF70C7F62C24B6B400BA54EC /* Pagination.swift in Sources */,
 				AF3DFA492C2394EA009D903C /* ViewCode.swift in Sources */,
+				AF70C8532C262BAE00BA54EC /* JSONWorker.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -548,15 +516,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		AF81F2492C238DEB00E35765 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				AF81F2522C238DEB00E35765 /* ItauChallengeUITests.swift in Sources */,
-				AF81F2542C238DEB00E35765 /* ItauChallengeUITestsLaunchTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -564,11 +523,6 @@
 			isa = PBXTargetDependency;
 			target = AF81F22C2C238DEA00E35765 /* ItauChallenge */;
 			targetProxy = AF81F2442C238DEB00E35765 /* PBXContainerItemProxy */;
-		};
-		AF81F24F2C238DEB00E35765 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = AF81F22C2C238DEA00E35765 /* ItauChallenge */;
-			targetProxy = AF81F24E2C238DEB00E35765 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -793,40 +747,6 @@
 			};
 			name = Release;
 		};
-		AF81F25E2C238DEB00E35765 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.challenge.ItauChallengeUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = ItauChallenge;
-			};
-			name = Debug;
-		};
-		AF81F25F2C238DEB00E35765 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.challenge.ItauChallengeUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = ItauChallenge;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -853,15 +773,6 @@
 			buildConfigurations = (
 				AF81F25B2C238DEB00E35765 /* Debug */,
 				AF81F25C2C238DEB00E35765 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		AF81F25D2C238DEB00E35765 /* Build configuration list for PBXNativeTarget "ItauChallengeUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				AF81F25E2C238DEB00E35765 /* Debug */,
-				AF81F25F2C238DEB00E35765 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

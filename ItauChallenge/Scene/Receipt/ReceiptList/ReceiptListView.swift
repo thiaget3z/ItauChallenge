@@ -8,15 +8,23 @@
 import Foundation
 import UIKit
 
+// MARK: - Protocols
+
 protocol ReceiptListViewDelegate: AnyObject {
     func didSelectReceipt(receipt: ReceiptEntity)
 }
 
+// MARK: - ReceiptListView
+
 class ReceiptListView: UIView {
+    
+    // MARK: - Properties
     
     var receipts: [ReceiptEntity]? {
         didSet {
-            self.receiptTableView.reloadData()
+            DispatchQueue.main.async {
+                self.receiptTableView.reloadData()
+            }            
         }
     }
     
@@ -30,6 +38,8 @@ class ReceiptListView: UIView {
     
     weak var delegate: ReceiptListViewDelegate?
     
+    // MARK: - Initializers
+    
     init() {
         super.init(frame: .zero)
         setupViewConfiguration()
@@ -38,8 +48,9 @@ class ReceiptListView: UIView {
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-    
 }
+
+// MARK: - UITableViewDataSource
 
 extension ReceiptListView: UITableViewDataSource {
     
@@ -59,8 +70,9 @@ extension ReceiptListView: UITableViewDataSource {
         cell.setupCell(receipt: receipt)
         return cell
     }
-    
 }
+
+// MARK: - UITableViewDelegate
 
 extension ReceiptListView: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
@@ -71,6 +83,8 @@ extension ReceiptListView: UITableViewDelegate {
     }
 }
 
+// MARK: - ViewCode
+
 extension ReceiptListView: ViewCode {
     var subViews: [UIView] {
         get {
@@ -79,7 +93,6 @@ extension ReceiptListView: ViewCode {
     }
     
     func setupConstraints() {
-    
         let constraints = [
             receiptTableView.topAnchor.constraint(equalTo: self.topAnchor),
             receiptTableView.bottomAnchor.constraint(equalTo: self.bottomAnchor),
@@ -93,6 +106,4 @@ extension ReceiptListView: ViewCode {
     func configureViews() {
         self.backgroundColor = .white
     }
-    
 }
-

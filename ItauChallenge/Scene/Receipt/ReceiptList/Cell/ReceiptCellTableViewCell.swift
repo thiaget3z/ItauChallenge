@@ -7,47 +7,54 @@
 
 import UIKit
 
+// MARK: - ReceiptCellTableViewCell
+
 class ReceiptCellTableViewCell: UITableViewCell {
+    
+    // MARK: - UI Elements
     
     lazy var receiptTitle: UILabel = {
         let label = UILabel(frame: .zero)
-        label.text = self.receipt?.title
         return label
     }()
     
     lazy var receiverName: UILabel = {
         let label = UILabel(frame: .zero)
-        label.text = self.receipt?.receiverName
         return label
     }()
     
     lazy var amount: UILabel = {
         let label = UILabel(frame: .zero)
-        label.text = self.receipt?.amount
         return label
     }()
     
     lazy var date: UILabel = {
         let label = UILabel(frame: .zero)
-        label.text = self.receipt?.date
         return label
     }()
     
     private var receipt: ReceiptEntity?
+    
+    // MARK: - Setup Methods
     
     func setupCell(receipt: ReceiptEntity) {
         self.receipt = receipt
         setupViewConfiguration()
     }
     
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-        // Configure the view for the selected state
+    override func prepareForReuse() {
+        receiptTitle.text = nil
+        receiverName.text = nil
+        amount.text = nil
+        date.text = nil
     }
     
 }
 
+// MARK: - ViewCode Extension
+
 extension ReceiptCellTableViewCell: ViewCode {
+    
     var subViews: [UIView] {
         [receiptTitle, receiverName, amount, date]
     }
@@ -78,6 +85,9 @@ extension ReceiptCellTableViewCell: ViewCode {
         receiptTitle.font = .preferredFont(forTextStyle: .headline)
         amount.font = .preferredFont(forTextStyle: .headline)
         
+        receiptTitle.text = self.receipt?.title
+        receiverName.text = self.receipt?.receiverName
+        amount.text = self.receipt?.amount
+        date.text = self.receipt?.date
     }
-    
 }

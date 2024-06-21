@@ -7,25 +7,25 @@
 import Foundation
 
 enum ReceiptDetail {
-  // MARK: Use cases
-  
-  enum RequestReceiptDetail {
-      
-    struct Request { }
-      
-    struct Response {
-        let receipt: ReceiptEntity
+    // MARK: Use cases
+    
+    enum RequestReceiptDetail {
+        
+        struct Request { }
+        
+        struct Response {
+            let receipt: ReceiptEntity
+        }
+        
+        struct ViewModel {
+            let title: String
+            let receiptId: String
+            let name: String
+            let receiverName: String
+            let amount: String
+            let control: String
+            let date: String
+        }
+        
     }
-      
-    struct ViewModel {
-        let title: String
-        let receiptId: String
-        let name: String
-        let receiverName: String
-        let amount: String
-        let control: String
-        let date: String
-    }
-      
-  }
 }

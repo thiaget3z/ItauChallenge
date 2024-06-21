@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Padding {
+enum Padding {
     
     static let paddingSmall: CGFloat = 10
     static let paddingMedium: CGFloat = 20

@@ -14,6 +14,9 @@
 "receiptDetailData" = "Data: %@";
 "receiptDetailReceiverName" = "Nome do favorecido: %@";
 "receiptDetailName" = "Nome: %@";
+"preferedDateLanguage" = "pt_BR";
+"dateFormatReceived" = "EEE, dd 'de' MMMM 'de' yyyy";
+"dateFormatCorrected" = "EEEE, dd 'de' MMMM 'de' yyyy";
 
 
 

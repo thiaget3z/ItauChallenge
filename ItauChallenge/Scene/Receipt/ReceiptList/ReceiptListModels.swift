@@ -8,6 +8,7 @@
 import Foundation
 
 enum ReceiptList {
+    
     // MARK: Use cases
     enum FetchReceipts {
         case title(title: ReceiptDetail.RequestReceiptDetail)

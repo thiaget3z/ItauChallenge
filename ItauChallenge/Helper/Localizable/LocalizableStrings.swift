@@ -16,6 +16,10 @@ enum LocalizableStrings: String {
     case receiptDetailData = "receiptDetailData"
     case receiptDetailReceiverName = "receiptDetailReceiverName"
     case receiptDetailName = "receiptDetailName"
+    case preferedDateLanguage = "preferedDateLanguage"
+    case dateFormatReceived = "dateFormatReceived"
+    case dateFormatCorrected = "dateFormatCorrected"
+    
     
     //MARK: Localized
     func localized() -> String { return NSLocalizedString(rawValue, comment: String()) }

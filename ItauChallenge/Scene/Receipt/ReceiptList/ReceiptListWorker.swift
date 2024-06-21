@@ -7,38 +7,63 @@
 
 import Foundation
 
-typealias ReceiptResponse = (Result<([ReceiptEntity], PaginationEntity), ReceiptListError>) -> Void
+// MARK: - Typealiases
+
+typealias ReceiptResponse = (Result<ReceiptListEntity, ReceiptListError>) -> Void
+
+// MARK: - Enums
 
 enum ReceiptListError: Error {
-    case decodeFailed
+    case fetchReceiptFailed
 }
+
+// MARK: - Protocols
 
 protocol ReceiptListWorkerProtocol: AnyObject {
     func fetchReceipt(page: Int, pageSize: Int, completion: @escaping ReceiptResponse)
 }
 
+// MARK: - ReceiptListWorker
+
 class ReceiptListWorker: ReceiptListWorkerProtocol {
-    func fetchReceipt(page: Int, pageSize: Int, completion: @escaping ReceiptResponse) {
-        do {
-            let data = try readLocalJSONFile(name: "comprovantes") ?? Data()
-            let decodedData = try JSONDecoder().decode(ReceiptDataEntity.self, from: data)
-            let pagination = PaginationEntity(page: 1, pageSize: 10, totalElements: 10, totalPages: 1)
-            completion(.success((decodedData.receiptData.receipts, pagination)))
-        } catch {
-            completion(.failure(.decodeFailed))
+    
+    private var dataWorker: DataReceiverProtocol?
+    private let comprovanteURI = "comprovantes"
+    var shouldFetchOffline = false
+    
+    // We can easily change this to work with a more elaborate AppConfiguration to change from API worker to JSON worker
+    // or use dependency injection to use another worker
+    init(dataWorker: DataReceiverProtocol? = nil) {
+        guard let _ = dataWorker else {
+            self.dataWorker = shouldFetchOffline ? JSONWorker() : APIWorker()
+            return
         }
+        
+        self.dataWorker = dataWorker
     }
     
-    func readLocalJSONFile(name: String) throws -> Data? {
-        do {
-            if let filePath = Bundle.main.path(forResource: name, ofType: "json") {
-                let fileUrl = URL(fileURLWithPath: filePath)
-                let data = try Data(contentsOf: fileUrl)
-                return data
-            }
+    // MARK: - Methods
+    
+    func fetchReceipt(page: Int, pageSize: Int, completion: @escaping ReceiptResponse) {
+        do{
+            try dataWorker?.requestData(URI: comprovanteURI, type: ReceiptDataEntity.self, completion: { result in
+                
+                switch result {
+                case .success(let data):
+                    guard let data = data else {
+                        completion(.failure(.fetchReceiptFailed))
+                        return
+                    }
+                    
+                    completion(.success(data.receiptData))
+                    
+                case .failure(_):
+                    completion(.failure(.fetchReceiptFailed))
+                }
+                
+            })
         } catch {
-            throw(ReceiptListError.decodeFailed)
+            completion(.failure(.fetchReceiptFailed))
         }
-        return nil
     }
 }

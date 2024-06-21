@@ -7,6 +7,8 @@
 
 import UIKit
 
+// MARK: - Protocols
+
 protocol ReceiptListRoutingLogic {
     func routeToDetail(receiptEntity: ReceiptEntity)
 }
@@ -15,8 +17,10 @@ protocol ReceiptListDataPassing {
     var dataStore: ReceiptListDataStore? { get }
 }
 
+// MARK: - ReceiptListRouter
+
 class ReceiptListRouter: ReceiptListRoutingLogic, ReceiptListDataPassing {
-    weak var viewController: ReceiptListViewController?
+    private weak var viewController: ReceiptListViewController?
     var dataStore: ReceiptListDataStore?
     
     init(viewController: ReceiptListViewController, dataStore: ReceiptListDataStore? = nil) {
@@ -24,7 +28,7 @@ class ReceiptListRouter: ReceiptListRoutingLogic, ReceiptListDataPassing {
         self.dataStore = dataStore
     }
     
-    // MARK: Routing
+    // MARK: - Routing
     
     func routeToDetail(receiptEntity: ReceiptEntity) {
         let detailViewController = ReceiptDetailViewController()

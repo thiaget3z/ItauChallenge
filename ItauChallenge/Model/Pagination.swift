@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct PaginationEntity {
+struct PaginationEntity: Decodable {
     let page: Int
     let pageSize: Int
     let totalElements: Int
